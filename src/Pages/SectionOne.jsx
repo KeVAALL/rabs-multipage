@@ -1,74 +1,25 @@
-import React from "react";
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import ShopIcon from "@mui/icons-material/Shop";
+import { Box, Grid } from "@mui/material";
+
 import MainContainer from "../Components/MainContainer";
-import CarouselOne from "../Components/Carousel";
+
+import { imageInfo } from "../Components/ComponentsOne/BoxCollapse";
+import BoxCollapse from "../Components/ComponentsOne/BoxCollapse";
+import CarouselSectionOne from "../Components/ComponentsOne/CarouselSectionOne";
 
 export default function SectionOne() {
   return (
     <MainContainer>
-      <Grid container spacing={1}>
-        <Grid item xs={6}>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              ml: 3,
-              gap: 2,
-              height: "470px",
-            }}
-          >
-            <Typography variant="h3" sx={{ fontWeight: "bold" }}>
-              India's #1 Real Estate CRM <br />
-              to sell more properties, <br />
-              faster
-            </Typography>
-            <Typography variant="h5" gutterBottom>
-              Convert every inquiry into a booking
-            </Typography>
-            <Button
-              sx={{
-                height: "70px",
-                width: "185px",
-                mt: 2.5,
-                color: "#DF21B6",
-                border: "2px #DF21B6 solid",
-                borderRadius: "15px",
-                textTransform: "none",
-                ":hover": {
-                  backgroundColor: "#DF21B6", // theme.palette.primary.main
-                  color: "white",
-                  border: "2px #DF21B6 solid",
-                  transition: "all 0.5s",
-                },
-              }}
-              variant="outlined"
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  gap: 0.5,
-                  padding: 0.6,
-                  // fontFamily: "Raleway"
-                }}
-              >
-                <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
-                  <ShopIcon sx={{ height: "17px" }} />
-                  <Typography variant="subtitle1">Google Play</Typography>
-                </Box>
-                <Typography variant="body1">(Download Now)</Typography>
+      <CarouselSectionOne />
+      <Grid container spacing={1} sx={{ mt: 3 }}>
+        {imageInfo.map((image, i) => {
+          return (
+            <Grid key={i} item xs={3}>
+              <Box sx={{ display: "flex", justifyContent: "center" }}>
+                <BoxCollapse url={image.url} title={image.title} />
               </Box>
-            </Button>
-          </Box>
-        </Grid>
-        <Grid item xs={6}>
-          <Box sx={{}}>
-            <CarouselOne />
-          </Box>
-        </Grid>
+            </Grid>
+          );
+        })}
       </Grid>
     </MainContainer>
   );

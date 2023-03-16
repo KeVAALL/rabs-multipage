@@ -39,7 +39,7 @@ export default function CarouselOne() {
       navButtonsAlwaysVisible={true}
     >
       {items.map((item, i) => (
-        <Paper elevation={15}>
+        <Paper key={i} elevation={15}>
           <img
             src={item.url}
             style={{ height: "100%", width: "100%", objectFit: "contain" }}

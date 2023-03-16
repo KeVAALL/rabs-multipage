@@ -52,7 +52,7 @@ export default function MainNavbar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", mb: 5 }}>
       <CssBaseline />
 
       <AppBar component="nav" sx={{ backgroundColor: "#fff", p: 1 }}>
@@ -103,21 +103,19 @@ export default function MainNavbar(props) {
                   <Typography sx={{ fontSize: "18px" }}>ONE</Typography>
                 </Link>
 
-                {navItems.map((item) => (
-                  <>
-                    <Link
-                      key={item}
-                      to={item}
-                      style={{
-                        textDecoration: "none",
-                        color: "black",
-                      }}
-                    >
-                      <Typography sx={{ fontSize: "18px" }}>
-                        {item.toUpperCase()}
-                      </Typography>
-                    </Link>
-                  </>
+                {navItems.map((item, i) => (
+                  <Link
+                    key={i}
+                    to={item}
+                    style={{
+                      textDecoration: "none",
+                      color: "black",
+                    }}
+                  >
+                    <Typography sx={{ fontSize: "18px" }}>
+                      {item.toUpperCase()}
+                    </Typography>
+                  </Link>
                 ))}
               </Box>
             </Box>
