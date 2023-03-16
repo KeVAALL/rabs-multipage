@@ -1,5 +1,8 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import aboutLogo from "../../images/about.png";
+import "../../App.css";
+import PaddingBox from "../PaddingBox";
+import PaddingBoxLarge from "../PaddingBox";
 
 export default function BounceImage() {
   return (
@@ -17,7 +20,31 @@ export default function BounceImage() {
             {/* </Bounce> */}
           </Box>
         </Grid>
-        <Grid item xs={6}></Grid>
+        <Grid item xs={6}>
+          <Box
+            sx={{
+              height: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              textAlign: "center",
+            }}
+          >
+            <PaddingBoxLarge>
+              <Typography variant="h4" sx={{ mb: 2 }}>
+                Capture all your interactions with the potential buyers
+              </Typography>
+
+              <Typography variant="body2" sx={{ lineHeight: 1.5 }}>
+                Whether the prospect calls your agents, books a site visit,
+                sends or receives an email or SMS from your agents, or
+                communicates through any other channel, all the conversations
+                are tracked within Lead Squared.
+              </Typography>
+            </PaddingBoxLarge>
+          </Box>
+        </Grid>
       </Grid>
     </>
   );

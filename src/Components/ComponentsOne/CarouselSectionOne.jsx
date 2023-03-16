@@ -1,5 +1,6 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import ShopIcon from "@mui/icons-material/Shop";
+import MarginBox from "../MarginBox";
 import CarouselOne from "../Carousel";
 
 export default function CarouselSectionOne() {
@@ -66,11 +67,12 @@ export default function CarouselSectionOne() {
           <CarouselOne />
         </Box>
       </Grid>
+
       <Grid item xs={12}>
         <Box sx={{ textAlign: "center" }}>
           <Typography variant="h4" sx={{ fontWeight: "bold" }}>
-            DESIGNED & BUILT TO SUPPORT REAL ESTATE BUILDERS, <br /> BROKERS AND
-            FAST GROWING MARKETPLACES
+            Designed & Built to support Real Estate Builders, <br /> Brokers and
+            Fast Growing Marketplaces
           </Typography>
         </Box>
       </Grid>

@@ -80,15 +80,5 @@ export default function BoxCollapse({ url, title }) {
     </Paper>
   );
 
-  return (
-    <Box
-    //   sx={{
-    //     display: "flex",
-    //     alignContent: "center",
-    //     justifyContent: "center",
-    //   }}
-    >
-      {icon}
-    </Box>
-  );
+  return <Box>{icon}</Box>;
 }

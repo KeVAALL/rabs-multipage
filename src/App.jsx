@@ -10,6 +10,9 @@ import RalewayTTF from "./fonts/raleway.regular.ttf";
 const theme = createTheme({
   typography: {
     fontFamily: "Raleway",
+    h4: {
+      fontWeight: 800,
+    },
   },
   components: {
     MuiCssBaseline: {
