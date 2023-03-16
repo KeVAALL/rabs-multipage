@@ -52,7 +52,7 @@ export default function MainNavbar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex", mb: 5 }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
 
       <AppBar component="nav" sx={{ backgroundColor: "#fff", p: 1 }}>
