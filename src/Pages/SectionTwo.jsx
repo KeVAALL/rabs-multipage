@@ -1,8 +1,9 @@
 import { Box } from "@mui/material";
-import MarginBox from "../utility/MarginBox";
-import MainContainer from "../utility/MainContainer";
+
 import ParallaxSwiper from "../Components/ComponentsTwo/ParallaxSwiper";
 import AbsoluteImages from "../Components/ComponentsTwo/AbsoluteImages";
+import Services from "../Components/ComponentsTwo/Services";
+import FooterTwo from "../Components/ComponentsTwo/FooterTwo";
 
 export default function SectionTwo() {
   return (
@@ -10,6 +11,10 @@ export default function SectionTwo() {
       <ParallaxSwiper />
 
       <AbsoluteImages />
+
+      <Services />
+
+      <FooterTwo />
     </>
   );
 }

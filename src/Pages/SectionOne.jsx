@@ -1,6 +1,6 @@
 import { Box, Grid } from "@mui/material";
 
-import MarginBox from "../utility/MarginBox";
+import MarginBox, { MarginTop } from "../utility/MarginBox";
 import MainContainer from "../utility/MainContainer";
 
 import { imageInfo } from "../Components/ComponentsOne/BoxCollapse";
@@ -33,9 +33,9 @@ export default function SectionOne() {
           <BounceImage />
         </MarginBox>
       </MainContainer>
-      <MarginBox>
+      <MarginTop>
         <Footer />
-      </MarginBox>
+      </MarginTop>
     </>
   );
 }
