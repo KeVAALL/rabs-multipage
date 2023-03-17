@@ -1,5 +1,5 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
-import PaddingBox, { PaddingBoxMedium } from "../PaddingBox";
+import { PaddingBoxMedium } from "../../utility/PaddingBox";
 
 export default function Footer() {
   return (

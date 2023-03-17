@@ -1,7 +1,7 @@
 import { Box, Grid } from "@mui/material";
 
-import MarginBox from "../Components/MarginBox";
-import MainContainer from "../Components/MainContainer";
+import MarginBox from "../utility/MarginBox";
+import MainContainer from "../utility/MainContainer";
 
 import { imageInfo } from "../Components/ComponentsOne/BoxCollapse";
 import CarouselSectionOne from "../Components/ComponentsOne/CarouselSectionOne";

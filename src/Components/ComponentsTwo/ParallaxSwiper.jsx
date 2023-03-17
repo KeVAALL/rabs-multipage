@@ -53,7 +53,7 @@ export default function ParallaxSwiper() {
       >
         {images.map((image) => (
           <SwiperSlide>
-            <img src={image.url} />
+            <img src={image.url} style={{ height: "35rem" }} />
           </SwiperSlide>
         ))}
       </Swiper>

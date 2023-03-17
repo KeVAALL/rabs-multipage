@@ -1,8 +1,8 @@
 import { Box, Grid, Typography } from "@mui/material";
 import aboutLogo from "../../images/about.png";
 import "../../App.css";
-import PaddingBox from "../PaddingBox";
-import PaddingBoxLarge from "../PaddingBox";
+
+import PaddingBoxLarge from "../../utility/PaddingBox";
 
 export default function BounceImage() {
   return (

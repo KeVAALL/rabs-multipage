@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import ShopIcon from "@mui/icons-material/Shop";
-import MarginBox from "../MarginBox";
+
 import CarouselOne from "../Carousel";
 
 export default function CarouselSectionOne() {
