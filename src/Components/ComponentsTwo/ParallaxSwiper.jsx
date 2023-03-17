@@ -40,6 +40,7 @@ export default function ParallaxSwiper() {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={"auto"}
+        initialSlide={1}
         coverflowEffect={{
           rotate: 40,
           stretch: 0,
