@@ -19,7 +19,7 @@ export function MarginTop({ children }) {
 export function MarginBoxLarge({ children }) {
   return (
     <>
-      <Box sx={{ mt: 5, mb: 5 }}>{children}</Box>
+      <Box sx={{ mt: 6, mb: 6 }}>{children}</Box>
     </>
   );
 }
