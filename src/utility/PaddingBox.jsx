@@ -1,9 +1,9 @@
 import { Box } from "@mui/material";
 
-export default function PaddingBoxLarge({ children }) {
+export function PaddingBoxSmall({ children }) {
   return (
     <>
-      <Box sx={{ p: 6 }}>{children}</Box>
+      <Box sx={{ p: 2 }}>{children}</Box>
     </>
   );
 }
@@ -16,10 +16,10 @@ export function PaddingBoxMedium({ children }) {
   );
 }
 
-export function PaddingBoxSmall({ children }) {
+export default function PaddingBoxLarge({ children }) {
   return (
     <>
-      <Box sx={{ p: 3 }}>{children}</Box>
+      <Box sx={{ p: 6 }}>{children}</Box>
     </>
   );
 }

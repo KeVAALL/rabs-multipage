@@ -1,9 +1,19 @@
+// import { makeStyles } from "@material-ui/core/styles";
+
 import { Box, Button, Grid, Typography } from "@mui/material";
+import { MarginTop } from "../../utility/MarginBox";
 import { PaddingBoxMedium, PaddingBoxSmall } from "../../utility/PaddingBox";
 
+// const useStyles = makeStyles((theme) => ({
+//   body1: {
+//     fontWeight: 400,
+//   },
+// }));
 export default function FooterTwo() {
+  //   const classes = useStyles();
+
   return (
-    <>
+    <MarginTop>
       <Box
         sx={{
           backgroundImage:
@@ -47,7 +57,11 @@ export default function FooterTwo() {
                       }}
                       variant="outlined"
                     >
-                      <Typography variant="body1" p={1}>
+                      <Typography
+                        variant="body1"
+                        // className={classes.body1}
+                        p={1}
+                      >
                         Request Demo and Trial
                       </Typography>
                     </Button>
@@ -59,6 +73,6 @@ export default function FooterTwo() {
           </Grid>
         </PaddingBoxSmall>
       </Box>
-    </>
+    </MarginTop>
   );
 }
