@@ -5,6 +5,8 @@ import MainContainer from "../../utility/MainContainer";
 import { MarginBoxLarge } from "../../utility/MarginBox";
 import SanjarIcon from "../../images/sanjar.png";
 import PaddingBoxLarge from "../../utility/PaddingBox";
+import TypographyUtil from "../../utility/TypographyUtil";
+import { TextAlignCenter, VerticalFlexCenter } from "../../utility/FlexBox";
 
 const images = [
   {
@@ -64,22 +66,17 @@ export default function Clients() {
         <PaddingBoxLarge>
           <Grid container>
             <Grid item xs={12}>
-              <Typography variant="h4" sx={{ textAlign: "center" }}>
-                TRUSTED BY 500+ REAL ESTATE BUSINESSES WORLDWIDE
-              </Typography>
+              <TextAlignCenter>
+                <TypographyUtil variant="h4">
+                  TRUSTED BY 500+ REAL ESTATE BUSINESSES WORLDWIDE
+                </TypographyUtil>
+              </TextAlignCenter>
             </Grid>
           </Grid>
           <Grid container>
             {images.map((image, i) => (
               <Grid item xs={3} key={i}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    gap: 1,
-                  }}
-                >
+                <VerticalFlexCenter gap={1}>
                   <img
                     src={image.src}
                     style={{ height: "200px", width: "200px" }}
@@ -90,7 +87,7 @@ export default function Clients() {
                       {image.location}
                     </Typography>
                   </Box>
-                </Box>
+                </VerticalFlexCenter>
               </Grid>
             ))}
           </Grid>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
+import { VerticalFlexCenter } from "../../utility/FlexBox";
 
 export const imageInfo = [
   {
@@ -62,21 +63,12 @@ export default function BoxCollapse({ url, title }) {
       }}
       elevation={isHovered ? 18 : 0}
     >
-      <Box
-        sx={{
-          width: 300,
-          height: 160,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <VerticalFlexCenter width={300} height={160}>
         <img src={url} style={{ height: "70px", width: "70px" }} />
         <Box sx={{ mt: 2 }}>
           <Typography variant="h5">{title}</Typography>
         </Box>
-      </Box>
+      </VerticalFlexCenter>
     </Paper>
   );
 

@@ -4,6 +4,8 @@ import MarginBox, { MarginBoxLarge } from "../../utility/MarginBox";
 import { Box } from "@mui/system";
 import { motion } from "framer-motion";
 import { PaddingBoxSmall } from "../../utility/PaddingBox";
+import TypographyUtil from "../../utility/TypographyUtil";
+import { VerticalFlexCenter } from "../../utility/FlexBox";
 
 const images = [
   {
@@ -84,18 +86,16 @@ export default function AdvancedSearch() {
                 height: "15rem",
               }}
             >
-              <Typography
+              <TypographyUtil
                 variant="h5"
-                sx={{
-                  position: "absolute",
-                  top: "80px",
-                  left: "55px",
-                  textAlign: "center",
-                }}
+                position="absolute"
+                top="80px"
+                left="55px"
+                textAlign="center"
               >
                 Advanced <br />
                 Search
-              </Typography>
+              </TypographyUtil>
             </Box>
             {/* UNIVERSAL */}
             {images.map((image, i) => (
@@ -185,22 +185,13 @@ export default function AdvancedSearch() {
           </Box>
         </Grid>
         <Grid item xs={6}>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              height: "80%",
-              alignItems: "center",
-              textAlign: "center",
-            }}
-          >
+          <VerticalFlexCenter height="80%" p={5}>
             <PaddingBoxSmall>
               <Typography variant="h4">Advanced Leads</Typography>
               <Typography variant="h6">
                 All your lead information in one place
               </Typography>
-              <Typography variant="body1" sx={{ mt: 2 }}>
+              <TypographyUtil variant="body1" mt={2}>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
                 quos sit quidem? Ab dolorum deleniti incidunt. Lorem ipsum dolor
                 sit amet, consectetur adipisicing elit. Error hic beatae dolores
@@ -208,9 +199,9 @@ export default function AdvancedSearch() {
                 ipsum dolor sit amet consectetur adipisicing elit. Excepturi
                 animi qui enim delectus corporis quidem reprehenderit facilis
                 quas itaque voluptate?
-              </Typography>
+              </TypographyUtil>
             </PaddingBoxSmall>
-          </Box>
+          </VerticalFlexCenter>
         </Grid>
       </Grid>
       {/* </MainContainer> */}

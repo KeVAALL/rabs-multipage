@@ -1,4 +1,8 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
+import {
+  HorizontalFlexCenter,
+  VerticalFlexCenter,
+} from "../../utility/FlexBox";
 import { PaddingBoxMedium } from "../../utility/PaddingBox";
 
 export default function Footer() {
@@ -13,34 +17,16 @@ export default function Footer() {
         <PaddingBoxMedium>
           <Grid container>
             <Grid item xs={8}>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  textAlign: "center",
-                  gap: 1,
-                  width: "100%",
-                  color: "#fff",
-                }}
-              >
+              <VerticalFlexCenter gap={1} width="100%" color="#fff">
                 <Typography variant="h4">Real Estate CRM Software</Typography>
                 <Typography variant="h5">
                   Made for Builders, Layout Developers, and Real Estate
                   Marketers.
                 </Typography>
-              </Box>
+              </VerticalFlexCenter>
             </Grid>
             <Grid item xs={4}>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  height: "100%",
-                }}
-              >
+              <HorizontalFlexCenter>
                 <Button
                   sx={{
                     height: "50px",
@@ -69,7 +55,7 @@ export default function Footer() {
                     <Typography variant="h5">Get Started</Typography>
                   </Box>
                 </Button>
-              </Box>
+              </HorizontalFlexCenter>
             </Grid>
           </Grid>
         </PaddingBoxMedium>

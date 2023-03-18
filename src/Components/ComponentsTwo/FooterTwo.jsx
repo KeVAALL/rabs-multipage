@@ -1,6 +1,10 @@
 // import { makeStyles } from "@material-ui/core/styles";
 
 import { Box, Button, Grid, Typography } from "@mui/material";
+import {
+  HorizontalFlexCenter,
+  VerticalFlexCenter,
+} from "../../utility/FlexBox";
 import { MarginTop } from "../../utility/MarginBox";
 import { PaddingBoxMedium, PaddingBoxSmall } from "../../utility/PaddingBox";
 
@@ -23,18 +27,8 @@ export default function FooterTwo() {
         <PaddingBoxSmall>
           <Grid container>
             <Grid item xs={12}>
-              <Box sx={{ display: "flex", justifyContent: "center" }}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    textAlign: "center",
-                    gap: 1,
-                    width: "100%",
-                    color: "#fff",
-                  }}
-                >
+              <HorizontalFlexCenter>
+                <VerticalFlexCenter gap={1} width="100%" color="#fff">
                   <Typography variant="h4">
                     A TAILOR-MADE CRM FOR REAL ESTATE SOFTWARE
                   </Typography>
@@ -67,8 +61,8 @@ export default function FooterTwo() {
                     </Button>
                   </Box>
                   <Typography variant="body1">Privacy Policy</Typography>
-                </Box>
-              </Box>
+                </VerticalFlexCenter>
+              </HorizontalFlexCenter>
             </Grid>
           </Grid>
         </PaddingBoxSmall>

@@ -8,6 +8,7 @@ import { Box } from "@mui/system";
 import PaddingBoxLarge, { PaddingBoxMedium } from "../../utility/PaddingBox";
 
 import { motion } from "framer-motion";
+import { VerticalFlexCenter } from "../../utility/FlexBox";
 
 const images = [
   {
@@ -37,22 +38,14 @@ export default function Services() {
         <PaddingBoxLarge>
           <Grid container spacing={3}>
             <Grid item xs={12}>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  textAlign: "center",
-                }}
-              >
+              <VerticalFlexCenter>
                 <Typography variant="h4" gutterBottom>
                   HOW TO CONTACT LEAD WITH CRM SOFTWARE
                 </Typography>
                 <Typography variant="body1">
                   Empower your sales teams to sell better and faster
                 </Typography>
-              </Box>
+              </VerticalFlexCenter>
             </Grid>
 
             {images.map((image) => (

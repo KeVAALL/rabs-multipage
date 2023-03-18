@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import MainContainer from "../../utility/MainContainer";
 import ImageUtilLarge, { ImageUtilSmall } from "../../utility/ImageUtil";
+import TypographyUtil from "../../utility/TypographyUtil";
 
 export default function AbsoluteImages() {
   return (
@@ -46,18 +47,16 @@ export default function AbsoluteImages() {
           right="305px"
         />
 
-        <Typography
+        <TypographyUtil
           variant="h2"
-          sx={{
-            textAlign: "center",
-            position: "absolute",
-            top: "375px",
-            left: "665px",
-          }}
+          textAlign="center"
+          position="absolute"
+          top="375px"
+          left="665px"
         >
           Lead
           <br /> Source
-        </Typography>
+        </TypographyUtil>
       </MainContainer>
     </Box>
   );
