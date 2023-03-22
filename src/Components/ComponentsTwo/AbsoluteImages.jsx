@@ -80,7 +80,7 @@ export default function AbsoluteImages() {
             <ImageUtilSmall
               url="http://rabsconnect.in/assets/img/fa/mg.png"
               top="275px"
-              right="20%"
+              left="1005px"
             />
 
             <TypographyUtil
