@@ -7,7 +7,7 @@ export default function Features() {
       <Grid container spacing={1}>
         {imageInfo.map((image, i) => {
           return (
-            <Grid key={i} item xs={3}>
+            <Grid key={i} item md={3} xs={6}>
               <Box sx={{ display: "flex", justifyContent: "center" }}>
                 <BoxCollapse url={image.url} title={image.title} />
               </Box>

@@ -10,7 +10,7 @@ export default function BounceImage() {
   return (
     <>
       <Grid container>
-        <Grid item xs={6}>
+        <Grid item md={6} xs={12}>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             {/* <Bounce top forever> */}
             <div className="box">
@@ -22,7 +22,7 @@ export default function BounceImage() {
             {/* </Bounce> */}
           </Box>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item md={6} xs={12}>
           <VerticalFlexCenter>
             <PaddingBoxLarge>
               <TypographyUtil variant="h4" mb={2}>

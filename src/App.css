@@ -16,3 +16,30 @@
 .bold {
   font-weight: 1000 !important;
 }
+
+.left-to-right {
+  background: linear-gradient(
+      to left bottom,
+      #da1ebd,
+      #c451d4,
+      #ae6ee4,
+      #9984ec,
+      #8a95ed,
+      #8395f1,
+      #7c94f4,
+      #7394f8,
+      #7282ff,
+      #7d6bff,
+      #914dff,
+      #a904f6
+    )
+    no-repeat;
+  background-size: 0%;
+  background-position: 100%;
+  transition: 0.4s;
+}
+
+.left-to-right:hover {
+  background-size: 100%;
+  transition: 0.4s;
+}

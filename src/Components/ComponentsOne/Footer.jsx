@@ -3,9 +3,14 @@ import {
   HorizontalFlexCenter,
   VerticalFlexCenter,
 } from "../../utility/FlexBox";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { PaddingBoxMedium } from "../../utility/PaddingBox";
+import { mediumDown } from "../../styles";
 
 export default function Footer() {
+  const mdDown = mediumDown();
+
   return (
     <>
       <Box
@@ -16,7 +21,7 @@ export default function Footer() {
       >
         <PaddingBoxMedium>
           <Grid container>
-            <Grid item xs={8}>
+            <Grid item md={8} xs={12}>
               <VerticalFlexCenter gap={1} width="100%" color="#fff">
                 <Typography variant="h4">Real Estate CRM Software</Typography>
                 <Typography variant="h5">
@@ -25,7 +30,7 @@ export default function Footer() {
                 </Typography>
               </VerticalFlexCenter>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item md={4} xs={12}>
               <HorizontalFlexCenter>
                 <Button
                   sx={{
@@ -36,6 +41,7 @@ export default function Footer() {
                     borderRadius: "25px",
                     textTransform: "none",
                     backgroundColor: "#fff",
+                    mt: mdDown && 3,
                     ":hover": {
                       // backgroundColor: "#DF21B6",
                       backgroundImage:

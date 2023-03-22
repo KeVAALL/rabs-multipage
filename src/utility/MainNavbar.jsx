@@ -14,10 +14,12 @@ import {
   Typography,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+
 import MenuIcon from "@mui/icons-material/Menu";
 
 import MainContainer from "./MainContainer";
 import NavLogo from "../images/rabs_connect_logo.png";
+import { mediumDown, smallDown } from "../styles";
 
 const drawerWidth = 240;
 const navItems = ["", "two"];
@@ -26,6 +28,9 @@ export default function MainNavbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
+  const mdDown = mediumDown();
+  const smDown = smallDown();
+
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
@@ -33,7 +38,7 @@ export default function MainNavbar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        RABS
       </Typography>
       <Divider />
       <List>
@@ -52,7 +57,12 @@ export default function MainNavbar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box
+      sx={{
+        display: "flex",
+        mb: smDown ? 20 : mdDown ? 10 : 20,
+      }}
+    >
       <CssBaseline />
 
       <AppBar component="nav" sx={{ backgroundColor: "#fff", p: 1 }}>
@@ -75,6 +85,25 @@ export default function MainNavbar(props) {
                 }}
               />
             </IconButton>
+
+            {smDown && (
+              <Box
+                sx={{
+                  p: 3,
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  width: "100%",
+                }}
+              >
+                <img
+                  src={NavLogo}
+                  style={{
+                    height: "40px",
+                    width: "120px",
+                  }}
+                />
+              </Box>
+            )}
 
             <Box sx={{ display: { xs: "none", sm: "block" }, flexGrow: 1 }}>
               <img
@@ -141,10 +170,8 @@ export default function MainNavbar(props) {
           }}
         >
           {drawer}
+          <Toolbar></Toolbar>
         </Drawer>
-      </Box>
-      <Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
       </Box>
     </Box>
   );

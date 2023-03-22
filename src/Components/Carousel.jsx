@@ -1,10 +1,15 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { Paper, Button, Box } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 export default function CarouselOne() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
+
   var items = [
     {
       url: "http://rabsconnect.in/assets/img/slider/banner-1.webp",
@@ -29,22 +34,24 @@ export default function CarouselOne() {
   return (
     <Carousel
       sx={{
-        height: "560px",
-        width: "570px",
-        boxShadow: 3,
-        borderRadius: 3,
+        height: "100%",
+        width: "100%",
+        boxShadow: "0 0 11px rgba(10,10,10,.3)",
+        borderRadius: 5,
+        display: "block",
+        // display: "flex",
+        // justifyContent: matches && "center",
       }}
       NextIcon={<ArrowForwardIosIcon />}
       PrevIcon={<ArrowBackIosNewIcon />}
       navButtonsAlwaysVisible={true}
     >
       {items.map((item, i) => (
-        <Paper key={i} elevation={15}>
-          <img
-            src={item.url}
-            style={{ height: "100%", width: "100%", objectFit: "contain" }}
-          />
-        </Paper>
+        <img
+          key={i}
+          src={item.url}
+          style={{ height: "100%", width: "100%", display: "block" }}
+        />
       ))}
     </Carousel>
   );

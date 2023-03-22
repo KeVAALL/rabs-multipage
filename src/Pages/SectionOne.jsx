@@ -7,6 +7,7 @@ import CarouselSectionOne from "../Components/ComponentsOne/CarouselSectionOne";
 import BounceImage from "../Components/ComponentsOne/BounceImage";
 import Footer from "../Components/ComponentsOne/Footer";
 import Features from "../Components/ComponentsOne/Features";
+import MarginBoxMedium from "../utility/MarginBox";
 
 export default function SectionOne() {
   return (
@@ -14,13 +15,13 @@ export default function SectionOne() {
       <MainContainer>
         <CarouselSectionOne />
 
-        <MarginBox>
+        <MarginBoxMedium>
           <Features />
-        </MarginBox>
+        </MarginBoxMedium>
 
-        <MarginBox>
+        <MarginBoxMedium>
           <BounceImage />
-        </MarginBox>
+        </MarginBoxMedium>
       </MainContainer>
       <MarginTop>
         <Footer />

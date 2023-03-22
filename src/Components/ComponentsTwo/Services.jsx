@@ -9,6 +9,7 @@ import PaddingBoxLarge, { PaddingBoxMedium } from "../../utility/PaddingBox";
 
 import { motion } from "framer-motion";
 import { VerticalFlexCenter } from "../../utility/FlexBox";
+import "../../App.css";
 
 const images = [
   {
@@ -56,29 +57,37 @@ export default function Services() {
                      * Setting the initial keyframe to "null" will use
                      * the current value to allow for interruptable keyframes.
                      */
+                    // className="left-to-right"
+                    style={{
+                      borderRadius: "10%",
+                      background: `linear-gradient(90deg, rgba(240,123,178,1) 0%, rgba(241,58,144,0.9473039215686274) 35%, rgba(238,5,114,1) 100%) no-repeat`,
+                      backgroundSize: "0%",
+                      backgroundPosition: "100%",
+                      boxShadow: "0 0 11px rgba(10,10,10,.3)",
+                    }}
+                    initial={{ scale: 1 }}
                     whileHover={{
-                      scale: [null, 1.3, 1.2],
-                      background:
-                        "linear-gradient(to left bottom, #d91ebd, #d71bc1, #d419c4, #d117c8, #ce16cc, #cb12d1, #c80fd5, #c40cda, #bf06e1, #b903e8, #b202ef, #aa05f6);",
+                      // scale: [null, 1.2, 1.1],
+                      backgroundColor: "rgb(218,30,189)",
+                      backgroundSize: "100%",
+                      color: "white",
                     }}
                     transition={{ duration: 0.5 }}
                   >
-                    <Paper elevation={10}>
-                      <PaddingBoxMedium>
-                        <Box>
-                          <img
-                            src={image.src}
-                            style={{ height: "48px", width: "48px" }}
-                          />
-                          <Typography variant="h6" gutterBottom>
-                            {image.title}
-                          </Typography>
-                          <Typography variant="body1">
-                            {image.description}
-                          </Typography>
-                        </Box>
-                      </PaddingBoxMedium>
-                    </Paper>
+                    <PaddingBoxMedium>
+                      <Box>
+                        <img
+                          src={image.src}
+                          style={{ height: "48px", width: "48px" }}
+                        />
+                        <Typography variant="h6" gutterBottom>
+                          {image.title}
+                        </Typography>
+                        <Typography variant="body1">
+                          {image.description}
+                        </Typography>
+                      </Box>
+                    </PaddingBoxMedium>
                   </motion.div>
                 </MarginBox>
               </Grid>

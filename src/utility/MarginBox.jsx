@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 export default function MarginBoxMedium({ children }) {
   return (
     <>
-      <Box sx={{ mt: 3, mb: 3 }}>{children}</Box>
+      <Box sx={{ mt: 4, mb: 4 }}>{children}</Box>
     </>
   );
 }
@@ -11,7 +11,7 @@ export default function MarginBoxMedium({ children }) {
 export function MarginTop({ children }) {
   return (
     <>
-      <Box sx={{ mt: 2.5 }}>{children}</Box>
+      <Box sx={{ mt: 3 }}>{children}</Box>
     </>
   );
 }
