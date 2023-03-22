@@ -66,6 +66,7 @@ export function VerticalFlexCenter({ children, ...options }) {
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
+          margin: "auto",
           ...options,
         }}
       >

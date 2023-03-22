@@ -1,31 +1,35 @@
 import { Grid, Paper, Typography } from "@mui/material";
 import MarginBox from "../../utility/MarginBox";
 import MainContainer from "../../utility/MainContainer";
-import WhatsAppIcon from "../../images/icons8-whatsapp-48.png";
-import RingIcon from "../../images/icons8-ringer-volume-50.png";
-import MailIcon from "../../images/icons8-mail-48.png";
+// import WhatsAppIcon from "../../images/icons8-whatsapp-48.png";
+// import RingIcon from "../../images/icons8-ringer-volume-50.png";
+// import MailIcon from "../../images/icons8-mail-48.png";
+import PhonePNG from "../../images/phone.png";
+import MailPNG from "../../images/gmail.png";
+import WhatsAppPNG from "../../images/whatsapp.png";
 import { Box } from "@mui/system";
 import PaddingBoxLarge, { PaddingBoxMedium } from "../../utility/PaddingBox";
 
 import { motion } from "framer-motion";
 import { VerticalFlexCenter } from "../../utility/FlexBox";
 import "../../App.css";
+import { mediumDown, smallDown } from "../../styles";
 
 const images = [
   {
-    src: WhatsAppIcon,
+    src: WhatsAppPNG,
     title: "Whatsapp",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus impedit quam eos excepturi molestias dolorem eum error. Id asperiores cupiditate repellendus at rerum dolor eligendi laborum optio suscipit? Assumenda dicta!",
   },
   {
-    src: RingIcon,
+    src: PhonePNG,
     title: "Pre-Sales & Call Center",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus impedit quam eos excepturi molestias dolorem eum error. Id asperiores cupiditate repellendus at rerum dolor eligendi laborum optio suscipit? Assumenda dicta!",
   },
   {
-    src: MailIcon,
+    src: MailPNG,
     title: "Email",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus impedit quam eos excepturi molestias dolorem eum error. Id asperiores cupiditate repellendus at rerum dolor eligendi laborum optio suscipit? Assumenda dicta!",
@@ -33,6 +37,9 @@ const images = [
 ];
 
 export default function Services() {
+  const mdDown = mediumDown();
+  const smDown = smallDown();
+
   return (
     <MarginBox>
       <MainContainer>
@@ -50,7 +57,7 @@ export default function Services() {
             </Grid>
 
             {images.map((image) => (
-              <Grid item xs={4}>
+              <Grid item lg={4} md={12} xs={12}>
                 <MarginBox>
                   <motion.div
                     /**
@@ -59,7 +66,7 @@ export default function Services() {
                      */
                     // className="left-to-right"
                     style={{
-                      borderRadius: "10%",
+                      borderRadius: "30px",
                       background: `linear-gradient(90deg, rgba(240,123,178,1) 0%, rgba(241,58,144,0.9473039215686274) 35%, rgba(238,5,114,1) 100%) no-repeat`,
                       backgroundSize: "0%",
                       backgroundPosition: "100%",

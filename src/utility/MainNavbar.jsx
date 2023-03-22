@@ -98,8 +98,8 @@ export default function MainNavbar(props) {
                 <img
                   src={NavLogo}
                   style={{
-                    height: "40px",
-                    width: "120px",
+                    height: "50px",
+                    width: "140px",
                   }}
                 />
               </Box>

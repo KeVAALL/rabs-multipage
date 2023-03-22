@@ -7,6 +7,7 @@ import SanjarIcon from "../../images/sanjar.png";
 import PaddingBoxLarge from "../../utility/PaddingBox";
 import TypographyUtil from "../../utility/TypographyUtil";
 import { TextAlignCenter, VerticalFlexCenter } from "../../utility/FlexBox";
+import { smallDown } from "../../styles";
 
 const images = [
   {
@@ -60,6 +61,8 @@ const images = [
 ];
 
 export default function Clients() {
+  const smDown = smallDown();
+
   return (
     <MainContainer>
       <MarginBoxLarge>
@@ -75,8 +78,8 @@ export default function Clients() {
           </Grid>
           <Grid container>
             {images.map((image, i) => (
-              <Grid item xs={3} key={i}>
-                <VerticalFlexCenter gap={1}>
+              <Grid item lg={3} sm={6} xs={12} key={i}>
+                <VerticalFlexCenter gap={smallDown ? 3 : 1}>
                   <img
                     src={image.src}
                     style={{ height: "200px", width: "200px" }}
