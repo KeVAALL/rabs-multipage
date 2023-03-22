@@ -53,7 +53,6 @@ export default function BoxCollapse({ url, title }) {
 
   const icon = (
     <Paper
-      sx={{}}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={{

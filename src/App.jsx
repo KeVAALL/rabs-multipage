@@ -14,6 +14,9 @@ const uniTheme = createTheme({
     h4: {
       fontWeight: 800,
     },
+    h5: {
+      fontWeight: 800,
+    },
   },
   components: {
     MuiCssBaseline: {
