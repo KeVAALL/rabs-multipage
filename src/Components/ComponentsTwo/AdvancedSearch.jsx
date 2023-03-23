@@ -1,22 +1,24 @@
 import { Grid, Paper, Typography } from "@mui/material";
-import MainContainer from "../../utility/MainContainer";
-import MarginBox, { MarginBoxLarge } from "../../utility/MarginBox";
+
+import { MarginBoxLarge } from "../../utility/MarginBox";
 import { Box } from "@mui/system";
 import { motion } from "framer-motion";
-import PaddingBoxLarge, {
-  PaddingBoxMedium,
-  PaddingBoxSmall,
-} from "../../utility/PaddingBox";
+import { PaddingBoxMedium, PaddingBoxSmall } from "../../utility/PaddingBox";
 import TypographyUtil from "../../utility/TypographyUtil";
 import { VerticalFlexCenter } from "../../utility/FlexBox";
 import DocumentPNG from "../../images/document.png";
 import { mediumDown } from "../../styles";
-import MarginBoxMedium from "../../utility/MarginBox";
 import { FadeBottom, FadeClear } from "../../utility/Fade";
+import ProjectNamePNG from "../../images/project-name.png";
+import FollowPNG from "../../images/follow.png";
+import UsersPNG from "../../images/Users.png";
+import SourcePNG from "../../images/Source.png";
+import leadDatePNG from "../../images/leadDate.png";
+import leadStatusPNG from "../../images/leadStatus.png";
 
 const images = [
   {
-    src: "http://rabsconnect.in/assets/img/advance-search/project-name.webp",
+    src: ProjectNamePNG,
     top: "100px",
     right: "0px",
     left: "-60px",
@@ -24,7 +26,7 @@ const images = [
     position: "left",
   },
   {
-    src: "http://rabsconnect.in/assets/img/advance-search/Follow.webp",
+    src: FollowPNG,
     top: "300px",
     right: "380px",
     left: "0px",
@@ -32,7 +34,7 @@ const images = [
     position: "left",
   },
   {
-    src: "http://rabsconnect.in/assets/img/advance-search/Users.webp",
+    src: UsersPNG,
     top: "-60px",
     right: "0px",
     left: "170px",
@@ -40,7 +42,7 @@ const images = [
     position: "between",
   },
   {
-    src: "http://rabsconnect.in/assets/img/advance-search/Source.webp",
+    src: SourcePNG,
     top: "400px",
     right: "0px",
     left: "180px",
@@ -48,7 +50,7 @@ const images = [
     position: "between",
   },
   {
-    src: "http://rabsconnect.in/assets/img/advance-search/Project.webp",
+    src: leadStatusPNG,
     top: "100px",
     right: "0px",
     left: "400px",
@@ -56,7 +58,7 @@ const images = [
     position: "right",
   },
   {
-    src: "http://rabsconnect.in/assets/img/advance-search/lead-date.webp",
+    src: leadDatePNG,
     top: "300px",
     right: "0px",
     left: "380px",

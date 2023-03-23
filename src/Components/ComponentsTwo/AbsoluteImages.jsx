@@ -11,22 +11,27 @@ import {
 } from "../../utility/FlexBox";
 import MarginBoxMedium from "../../utility/MarginBox";
 import { PaddingBoxMedium, PaddingBoxSmall } from "../../utility/PaddingBox";
+import FacebookPNG from "../../images/facebook.png";
+import GooglePNG from "../../images/google.png";
+import SemiPNG from "../../images/semi.png";
+import HPNG from "../../images/h.png";
+import MgPNG from "../../images/mg.png";
 
 const images = [
   {
-    url: "http://rabsconnect.in/assets/img/fa/facebook.png",
+    url: FacebookPNG,
     title: "Facebook",
   },
   {
-    url: "http://rabsconnect.in/assets/img/fa/g.png",
+    url: GooglePNG,
     title: "Google",
   },
   {
-    url: "http://rabsconnect.in/assets/img/fa/h.png",
+    url: HPNG,
     title: "Housing",
   },
   {
-    url: "http://rabsconnect.in/assets/img/fa/mg.png",
+    url: MgPNG,
     title: "Magic Bricks",
   },
 ];
@@ -58,35 +63,15 @@ export default function AbsoluteImages() {
             }}
           >
             <MainContainer>
-              <ImageUtilLarge
-                url="http://rabsconnect.in/assets/img/fa/Untitled-1.png"
-                top="270px"
-                left="510px"
-              />
+              <ImageUtilLarge url={SemiPNG} top="270px" left="510px" />
 
-              <ImageUtilSmall
-                url="http://rabsconnect.in/assets/img/fa/facebook.png"
-                top="275px"
-                left="305px"
-              />
+              <ImageUtilSmall url={FacebookPNG} top="275px" left="305px" />
 
-              <ImageUtilSmall
-                url="http://rabsconnect.in/assets/img/fa/g.png"
-                top="80px"
-                left="520px"
-              />
+              <ImageUtilSmall url={GooglePNG} top="80px" left="520px" />
 
-              <ImageUtilSmall
-                url="http://rabsconnect.in/assets/img/fa/h.png"
-                top="80px"
-                left="820px"
-              />
+              <ImageUtilSmall url={HPNG} top="80px" left="820px" />
 
-              <ImageUtilSmall
-                url="http://rabsconnect.in/assets/img/fa/mg.png"
-                top="275px"
-                left="1005px"
-              />
+              <ImageUtilSmall url={MgPNG} top="275px" left="1005px" />
 
               <TypographyUtil
                 variant="h2"

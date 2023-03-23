@@ -9,28 +9,33 @@ import "./swiper.css";
 
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
-import { Box } from "@mui/system";
+import Slider1 from "../../images/mobile-slider1.png";
+import Slider2 from "../../images/mobile-slider2.png";
+import Slider3 from "../../images/mobile-slider3.png";
+import Slider4 from "../../images/mobile-slider4.png";
+import Slider5 from "../../images/mobile-slider5.png";
+import Slider6 from "../../images/mobile-slider6.png";
 import { FadeRight } from "../../utility/Fade";
 
 export default function ParallaxSwiper() {
   const images = [
     {
-      url: "http://rabsconnect.in/assets/img/images/moblie-slider1.webp",
+      url: Slider1,
     },
     {
-      url: "http://rabsconnect.in/assets/img/images/moblie-slider2.webp",
+      url: Slider2,
     },
     {
-      url: "http://rabsconnect.in/assets/img/images/moblie-slider3.webp",
+      url: Slider3,
     },
     {
-      url: "http://rabsconnect.in/assets/img/images/moblie-slider4.webp",
+      url: Slider4,
     },
     {
-      url: "http://rabsconnect.in/assets/img/images/moblie-slider5.webp",
+      url: Slider5,
     },
     {
-      url: "http://rabsconnect.in/assets/img/images/moblie-slider6.webp",
+      url: Slider6,
     },
   ];
 

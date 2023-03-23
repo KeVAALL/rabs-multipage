@@ -3,38 +3,46 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 import { VerticalFlexCenter } from "../../utility/FlexBox";
+import Icon1 from "../../images/icon1.png";
+import Icon2 from "../../images/icon2.png";
+import Icon3 from "../../images/icon3.png";
+import Icon4 from "../../images/icon4.png";
+import Icon5 from "../../images/icon5.png";
+import Icon6 from "../../images/icon6.png";
+import Icon7 from "../../images/icon7.png";
+import Icon8 from "../../images/icon8.png";
 
 export const imageInfo = [
   {
-    url: "http://rabsconnect.in/assets/img/icons/icon1.webp",
+    url: Icon1,
     title: "Total No. of Leads",
   },
   {
-    url: "http://rabsconnect.in/assets/img/icons/icon2.webp",
+    url: Icon2,
     title: "Assigned Leads",
   },
   {
-    url: "http://rabsconnect.in/assets/img/icons/icon3.webp",
+    url: Icon3,
     title: "Non-Assign Leads",
   },
   {
-    url: "http://rabsconnect.in/assets/img/icons/icon4.webp",
+    url: Icon4,
     title: "Phase-I :- Opening",
   },
   {
-    url: "http://rabsconnect.in/assets/img/icons/icon5.webp",
+    url: Icon5,
     title: "Phase-II :- Show Time",
   },
   {
-    url: "http://rabsconnect.in/assets/img/icons/icon6.webp",
+    url: Icon6,
     title: "Phase-III :- Closing",
   },
   {
-    url: "http://rabsconnect.in/assets/img/icons/icon7.webp",
+    url: Icon7,
     title: "Today's Follow up",
   },
   {
-    url: "http://rabsconnect.in/assets/img/icons/icon8.webp",
+    url: Icon8,
     title: "Missed Follow Up's",
   },
 ];
