@@ -89,7 +89,7 @@ export default function MainNavbar(props) {
     <Box
       sx={{
         display: "flex",
-        mb: smDown ? 20 : mdDown ? 10 : 20,
+        mb: smDown ? 15 : mdDown ? 10 : 15,
       }}
     >
       <CssBaseline />

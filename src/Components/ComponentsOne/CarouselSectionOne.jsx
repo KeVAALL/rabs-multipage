@@ -28,7 +28,7 @@ export default function CarouselSectionOne() {
   };
 
   return (
-    <HorizontalFlex mt={mdDown && 5}>
+    <HorizontalFlex mt={mdDown && 3}>
       <FormDialog
         open={open}
         handleClickOpen={handleClickOpen}
@@ -60,7 +60,7 @@ export default function CarouselSectionOne() {
             <Box
               sx={{
                 height: { xs: 450, md: 550, lg: 650 },
-                width: { xs: 400, md: 500, lg: 600 },
+                width: { xs: 352, md: 500, lg: 600 },
                 display: "flex",
                 justifyContent: mdDown && "center",
                 margin: "auto",
