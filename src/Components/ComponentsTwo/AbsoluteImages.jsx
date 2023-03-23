@@ -4,7 +4,11 @@ import MainContainer from "../../utility/MainContainer";
 import ImageUtilLarge, { ImageUtilSmall } from "../../utility/ImageUtil";
 import TypographyUtil from "../../utility/TypographyUtil";
 import { mediumUp } from "../../styles";
-import { HorizontalFlex, VerticalFlexCenter } from "../../utility/FlexBox";
+import {
+  HorizontalFlex,
+  HorizontalFlexCenter,
+  VerticalFlexCenter,
+} from "../../utility/FlexBox";
 import MarginBoxMedium from "../../utility/MarginBox";
 import { PaddingBoxMedium, PaddingBoxSmall } from "../../utility/PaddingBox";
 
@@ -42,59 +46,61 @@ export default function AbsoluteImages() {
   return (
     <>
       {mdUp ? (
-        <Box
-          sx={{
-            height: "600px",
-            width: "100%",
-            backgroundColor: "#F7FBFE",
-            mt: 5,
-            p: 4,
-            position: "relative",
-          }}
-        >
-          <MainContainer>
-            <ImageUtilLarge
-              url="http://rabsconnect.in/assets/img/fa/Untitled-1.png"
-              top="270px"
-              left="510px"
-            />
+        <HorizontalFlexCenter>
+          <Box
+            sx={{
+              height: "600px",
+              width: "100%",
+              backgroundColor: "#F7FBFE",
+              mt: 5,
+              p: 4,
+              position: "relative",
+            }}
+          >
+            <MainContainer>
+              <ImageUtilLarge
+                url="http://rabsconnect.in/assets/img/fa/Untitled-1.png"
+                top="270px"
+                left="510px"
+              />
 
-            <ImageUtilSmall
-              url="http://rabsconnect.in/assets/img/fa/facebook.png"
-              top="275px"
-              left="305px"
-            />
+              <ImageUtilSmall
+                url="http://rabsconnect.in/assets/img/fa/facebook.png"
+                top="275px"
+                left="305px"
+              />
 
-            <ImageUtilSmall
-              url="http://rabsconnect.in/assets/img/fa/g.png"
-              top="80px"
-              left="520px"
-            />
+              <ImageUtilSmall
+                url="http://rabsconnect.in/assets/img/fa/g.png"
+                top="80px"
+                left="520px"
+              />
 
-            <ImageUtilSmall
-              url="http://rabsconnect.in/assets/img/fa/h.png"
-              top="80px"
-              left="820px"
-            />
+              <ImageUtilSmall
+                url="http://rabsconnect.in/assets/img/fa/h.png"
+                top="80px"
+                left="820px"
+              />
 
-            <ImageUtilSmall
-              url="http://rabsconnect.in/assets/img/fa/mg.png"
-              top="275px"
-              left="1005px"
-            />
+              <ImageUtilSmall
+                url="http://rabsconnect.in/assets/img/fa/mg.png"
+                top="275px"
+                left="1005px"
+              />
 
-            <TypographyUtil
-              variant="h2"
-              textAlign="center"
-              position="absolute"
-              top="375px"
-              left="665px"
-            >
-              Lead
-              <br /> Source
-            </TypographyUtil>
-          </MainContainer>
-        </Box>
+              <TypographyUtil
+                variant="h2"
+                textAlign="center"
+                position="absolute"
+                top="375px"
+                left="665px"
+              >
+                Lead
+                <br /> Source
+              </TypographyUtil>
+            </MainContainer>
+          </Box>
+        </HorizontalFlexCenter>
       ) : (
         <MarginBoxMedium>
           <VerticalFlexCenter>

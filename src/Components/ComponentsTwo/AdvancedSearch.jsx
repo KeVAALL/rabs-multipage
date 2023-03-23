@@ -102,28 +102,16 @@ export default function AdvancedSearch() {
           <Grid item xs={6}>
             <FadeClear duration={2000}>
               <Box sx={{ position: "relative" }}>
-                <Box
-                  sx={{
-                    border: "7px solid #ccc",
-                    width: "15rem",
-                    borderRadius: "50%",
-                    position: "absolute",
-                    top: "130px",
-                    left: "255px",
-                    height: "15rem",
-                  }}
+                <TypographyUtil
+                  variant="h5"
+                  position="absolute"
+                  top="220px"
+                  right="300px"
+                  textAlign="center"
                 >
-                  <TypographyUtil
-                    variant="h5"
-                    position="absolute"
-                    top="80px"
-                    left="55px"
-                    textAlign="center"
-                  >
-                    Advanced <br />
-                    Search
-                  </TypographyUtil>
-                </Box>
+                  Advanced <br />
+                  Search
+                </TypographyUtil>
               </Box>
               <Box
                 sx={{
@@ -145,6 +133,17 @@ export default function AdvancedSearch() {
                   animation: "spin 15s linear infinite",
                 }}
               >
+                <Box
+                  sx={{
+                    border: "7px solid #ccc",
+                    width: "15rem",
+                    borderRadius: "50%",
+                    position: "absolute",
+                    top: "107px",
+                    left: "135px",
+                    height: "15rem",
+                  }}
+                ></Box>
                 {/* UNIVERSAL */}
                 {images.map((image, i) => (
                   <motion.div

@@ -20,9 +20,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import MainContainer from "./MainContainer";
 import NavLogo from "../images/rabs_connect_logo.png";
 import { mediumDown, smallDown } from "../styles";
+import { HorizontalFlexCenter } from "./FlexBox";
+import { FadeClear } from "./Fade";
 
 const drawerWidth = 240;
-const navItems = ["", "two"];
+const navItems = ["TWO"];
 
 export default function MainNavbar(props) {
   const { window } = props;
@@ -42,10 +44,37 @@ export default function MainNavbar(props) {
       </Typography>
       <Divider />
       <List>
+        <ListItem key="one" disablePadding>
+          <ListItemButton sx={{ textAlign: "center" }}>
+            <HorizontalFlexCenter>
+              <Link
+                key="one"
+                to=""
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                }}
+              >
+                <Typography sx={{ fontSize: "18px" }}>ONE</Typography>
+              </Link>
+            </HorizontalFlexCenter>
+          </ListItemButton>
+        </ListItem>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <HorizontalFlexCenter>
+                <Link
+                  key={item}
+                  to={item}
+                  style={{
+                    textDecoration: "none",
+                    color: "black",
+                  }}
+                >
+                  <Typography sx={{ fontSize: "18px" }}>{item}</Typography>
+                </Link>
+              </HorizontalFlexCenter>
             </ListItemButton>
           </ListItem>
         ))}
@@ -95,13 +124,15 @@ export default function MainNavbar(props) {
                   width: "100%",
                 }}
               >
-                <img
-                  src={NavLogo}
-                  style={{
-                    height: "50px",
-                    width: "140px",
-                  }}
-                />
+                <FadeClear>
+                  <img
+                    src={NavLogo}
+                    style={{
+                      height: "50px",
+                      width: "140px",
+                    }}
+                  />
+                </FadeClear>
               </Box>
             )}
 
