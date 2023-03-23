@@ -118,7 +118,7 @@ export default function MainNavbar(props) {
             {smDown && (
               <Box
                 sx={{
-                  p: 3,
+                  p: 1,
                   display: "flex",
                   justifyContent: "flex-end",
                   width: "100%",

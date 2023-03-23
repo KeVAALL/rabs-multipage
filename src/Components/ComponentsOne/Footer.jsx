@@ -20,6 +20,7 @@ export default function Footer() {
           sx={{
             backgroundImage:
               "linear-gradient(to bottom, #d81dbf, #d519c4, #d115c9, #cd12cf, #c811d4, #c40dd9, #c00bdd, #bc09e2, #b704e8, #b202ed, #ad01f3, #a602f9)",
+            width: "100%",
           }}
         >
           <PaddingBoxMedium>

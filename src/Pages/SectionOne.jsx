@@ -8,24 +8,27 @@ import BounceImage from "../Components/ComponentsOne/BounceImage";
 import Footer from "../Components/ComponentsOne/Footer";
 import Features from "../Components/ComponentsOne/Features";
 import MarginBoxMedium from "../utility/MarginBox";
+import { mediumDown } from "../styles";
 
 export default function SectionOne() {
+  const mdDown = mediumDown();
+
   return (
-    <>
+    <Box
+      sx={{
+        overflowX: "hidden",
+      }}
+    >
       <MainContainer>
         <CarouselSectionOne />
 
-        <MarginBoxMedium>
-          <Features />
-        </MarginBoxMedium>
+        <Features />
 
-        <MarginBoxLarge>
-          <BounceImage />
-        </MarginBoxLarge>
+        <BounceImage />
       </MainContainer>
       <MarginTop>
         <Footer />
       </MarginTop>
-    </>
+    </Box>
   );
 }

@@ -1,11 +1,12 @@
 import { Box, Grid } from "@mui/material";
 
 import { FadeBottom } from "../../utility/Fade";
+import MarginBoxMedium from "../../utility/MarginBox";
 import BoxCollapse, { imageInfo } from "./BoxCollapse";
 
 export default function Features() {
   return (
-    <>
+    <MarginBoxMedium>
       <Grid container spacing={1}>
         {imageInfo.map((image, i) => {
           return (
@@ -19,6 +20,6 @@ export default function Features() {
           );
         })}
       </Grid>
-    </>
+    </MarginBoxMedium>
   );
 }

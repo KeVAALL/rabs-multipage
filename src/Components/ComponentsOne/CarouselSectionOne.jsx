@@ -3,7 +3,11 @@ import { Box, Grid } from "@mui/material";
 import { useState } from "react";
 import CarouselOne from "../Carousel";
 import TypographyUtil from "../../utility/TypographyUtil";
-import { TextAlignCenter, VerticalFlex } from "../../utility/FlexBox";
+import {
+  HorizontalFlex,
+  TextAlignCenter,
+  VerticalFlex,
+} from "../../utility/FlexBox";
 import MarginBoxMedium from "../../utility/MarginBox";
 import { mediumDown } from "../../styles";
 import DownloadBtn from "./DownloadBtn";
@@ -24,7 +28,7 @@ export default function CarouselSectionOne() {
   };
 
   return (
-    <>
+    <HorizontalFlex mt={mdDown && 5}>
       <FormDialog
         open={open}
         handleClickOpen={handleClickOpen}
@@ -60,6 +64,7 @@ export default function CarouselSectionOne() {
                 display: "flex",
                 justifyContent: mdDown && "center",
                 margin: "auto",
+                mt: mdDown && 4,
               }}
             >
               <CarouselOne />
@@ -97,6 +102,6 @@ export default function CarouselSectionOne() {
           </FadeBottom>
         </Grid>
       </Grid>
-    </>
+    </HorizontalFlex>
   );
 }

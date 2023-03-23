@@ -7,10 +7,11 @@ import PaddingBoxLarge from "../../utility/PaddingBox";
 import TypographyUtil from "../../utility/TypographyUtil";
 import { VerticalFlexCenter } from "../../utility/FlexBox";
 import { FadeLeft, FadeRight } from "../../utility/Fade";
+import { MarginBoxLarge } from "../../utility/MarginBox";
 
 export default function BounceImage() {
   return (
-    <>
+    <MarginBoxLarge>
       <Grid container>
         <Grid item md={6} xs={12}>
           <FadeLeft>
@@ -45,6 +46,6 @@ export default function BounceImage() {
           </VerticalFlexCenter>
         </Grid>
       </Grid>
-    </>
+    </MarginBoxLarge>
   );
 }
