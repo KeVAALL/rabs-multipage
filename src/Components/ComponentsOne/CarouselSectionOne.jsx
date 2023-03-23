@@ -7,9 +7,10 @@ import {
   HorizontalFlex,
   TextAlignCenter,
   VerticalFlex,
+  VerticalFlexCenter,
 } from "../../utility/FlexBox";
 import MarginBoxMedium from "../../utility/MarginBox";
-import { mediumDown } from "../../styles";
+import { mediumDown, smallDown } from "../../styles";
 import DownloadBtn from "./DownloadBtn";
 import RequestDemo from "./RequestDemo";
 import FormDialog from "../../utility/Dialog";
@@ -17,6 +18,7 @@ import { FadeBottom, FadeRight } from "../../utility/Fade";
 
 export default function CarouselSectionOne() {
   const mdDown = mediumDown();
+  const smDown = smallDown();
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -28,7 +30,7 @@ export default function CarouselSectionOne() {
   };
 
   return (
-    <HorizontalFlex mt={mdDown && 7}>
+    <HorizontalFlex mt={mdDown && 5}>
       <FormDialog
         open={open}
         handleClickOpen={handleClickOpen}
@@ -37,9 +39,9 @@ export default function CarouselSectionOne() {
       <Grid container spacing={5}>
         <Grid item xs={12} md={6}>
           <FadeBottom>
-            <VerticalFlex ml={3} gap={2} height="470px">
+            <VerticalFlexCenter ml={3} gap={2} height="470px">
               <TypographyUtil
-                variant="h3"
+                variant={!smallDown ? "h3" : "h4"}
                 fontWeight="bold"
                 textAlign={mdDown && "center"}
               >
@@ -47,12 +49,15 @@ export default function CarouselSectionOne() {
                 to sell more properties, <br />
                 faster
               </TypographyUtil>
-              <TypographyUtil variant="h5" textAlign={mdDown && "center"}>
+              <TypographyUtil
+                variant={!smallDown ? "h5" : "h6"}
+                textAlign={mdDown && "center"}
+              >
                 Convert every inquiry into a booking
               </TypographyUtil>
               <DownloadBtn />
               <RequestDemo handleClickOpen={handleClickOpen} />
-            </VerticalFlex>
+            </VerticalFlexCenter>
           </FadeBottom>
         </Grid>
         <Grid item xs={12} md={6}>
@@ -63,8 +68,8 @@ export default function CarouselSectionOne() {
                 width: { xs: "100%", md: 500, lg: 600 },
                 display: "flex",
                 justifyContent: mdDown && "center",
-                margin: "auto",
-                mt: mdDown && 4,
+                // margin: "auto",
+                mt: mdDown && 2,
               }}
             >
               <CarouselOne />
