@@ -30,3 +30,8 @@ export const smallUp = () => {
   const theme = useTheme();
   return useMediaQuery(theme.breakpoints.up("sm"));
 };
+
+export const xSUp = () => {
+  const theme = useTheme();
+  return useMediaQuery(theme.breakpoints.up("xs"));
+};

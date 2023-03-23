@@ -8,8 +8,12 @@ import TypographyUtil from "../../utility/TypographyUtil";
 import { VerticalFlexCenter } from "../../utility/FlexBox";
 import { FadeLeft, FadeRight } from "../../utility/Fade";
 import { MarginBoxLarge } from "../../utility/MarginBox";
+import { mediumUp, smallUp, xSUp } from "../../styles";
 
 export default function BounceImage() {
+  const mdUp = mediumUp();
+  const smUp = smallUp();
+
   return (
     <MarginBoxLarge>
       <Grid container>
@@ -20,7 +24,12 @@ export default function BounceImage() {
               <div className="box">
                 <img
                   src={aboutLogo}
-                  style={{ height: "500px", width: "600px" }}
+                  style={{
+                    // height: { md: "500px", xs: "350px" },
+                    // width: { md: "600px", xs: "380px" },
+                    height: mdUp ? "500px" : smUp ? "410px" : "350px",
+                    width: mdUp ? "600px" : smUp ? "490px" : "400px",
+                  }}
                 />
               </div>
               {/* </Bounce> */}
