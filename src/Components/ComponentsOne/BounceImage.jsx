@@ -26,7 +26,7 @@ export default function BounceImage() {
                   src={aboutLogo}
                   style={{
                     height: mdUp ? "500px" : smUp ? "410px" : "350px",
-                    width: mdUp ? "600px" : smUp ? "490px" : "400px",
+                    width: mdUp ? "600px" : smUp ? "490px" : "420px",
                   }}
                 />
               </div>
