@@ -12,6 +12,7 @@ import { VerticalFlexCenter } from "../../utility/FlexBox";
 import DocumentPNG from "../../images/document.png";
 import { mediumDown } from "../../styles";
 import MarginBoxMedium from "../../utility/MarginBox";
+import { FadeBottom, FadeClear } from "../../utility/Fade";
 
 const images = [
   {
@@ -99,201 +100,207 @@ export default function AdvancedSearch() {
       <Grid container sx={{ backgroundColor: "#F7FBFE" }}>
         {!mdDown ? (
           <Grid item xs={6}>
-            <Box sx={{ position: "relative" }}>
+            <FadeClear duration={2000}>
+              <Box sx={{ position: "relative" }}>
+                <Box
+                  sx={{
+                    border: "7px solid #ccc",
+                    width: "15rem",
+                    borderRadius: "50%",
+                    position: "absolute",
+                    top: "130px",
+                    left: "255px",
+                    height: "15rem",
+                  }}
+                >
+                  <TypographyUtil
+                    variant="h5"
+                    position="absolute"
+                    top="80px"
+                    left="55px"
+                    textAlign="center"
+                  >
+                    Advanced <br />
+                    Search
+                  </TypographyUtil>
+                </Box>
+              </Box>
               <Box
                 sx={{
-                  border: "7px solid #ccc",
-                  width: "15rem",
+                  width: "30rem",
+                  height: "30rem",
+                  margin: "10px auto",
+                  border: " 7px solid #ccc",
+                  position: "relative",
                   borderRadius: "50%",
-                  position: "absolute",
-                  top: "130px",
-                  left: "255px",
-                  height: "15rem",
+                  zIndex: 0,
+                  "@keyframes spin": {
+                    from: {
+                      transform: "rotate(0deg)",
+                    },
+                    to: {
+                      transform: "rotate(360deg)",
+                    },
+                  },
+                  animation: "spin 15s linear infinite",
                 }}
               >
-                <TypographyUtil
-                  variant="h5"
-                  position="absolute"
-                  top="80px"
-                  left="55px"
-                  textAlign="center"
-                >
-                  Advanced <br />
-                  Search
-                </TypographyUtil>
-              </Box>
-            </Box>
-            <Box
-              sx={{
-                width: "30rem",
-                height: "30rem",
-                margin: "10px auto",
-                border: " 7px solid #ccc",
-                position: "relative",
-                borderRadius: "50%",
-                zIndex: 0,
-                "@keyframes spin": {
-                  from: {
-                    transform: "rotate(0deg)",
-                  },
-                  to: {
-                    transform: "rotate(360deg)",
-                  },
-                },
-                animation: "spin 15s linear infinite",
-              }}
-            >
-              {/* UNIVERSAL */}
-              {images.map((image, i) => (
-                <motion.div
-                  key={i}
-                  style={{
-                    height: "120px",
-                    width: "120px",
-                    position: "absolute",
-                    top: `${image.top}`,
-                    right: `${image.right}`,
-                    left: `${image.left}`,
-                    bottom: `${image.bottom}`,
-                    zIndex: 10,
-                    backgroundColor: "white",
-                    border: "5px solid rgb(218,30,189)",
-                    borderRadius: "50%",
-                    "@keyframes spin": {
-                      from: {
-                        transform: "rotate(0deg)",
-                      },
-                      to: {
-                        transform: "rotate(360deg)",
-                      },
-                    },
-                    animation: "spin 15s linear infinite reverse",
-                  }}
-                  whileHover={{
-                    scale: [1, 1.3],
-                    x:
-                      image.position === "left"
-                        ? "-20"
-                        : image.position === "between"
-                        ? "0"
-                        : "20",
-                    y:
-                      image.position === "left"
-                        ? "-30"
-                        : image.position === "between"
-                        ? "-20"
-                        : "-30",
-                    // rotate: [0, -15],
-                    rotate:
-                      image.position === "left"
-                        ? [0, -15]
-                        : image.position === "between"
-                        ? [0, 8]
-                        : [0, 15],
-                    borderRadius: ["50%", "25%"],
-                    boxShadow: "0 0 11px rgba(10,10,10,.3)",
-                  }}
-                  transition={{
-                    duration: 0.6,
-                    ease: "easeInOut",
-                  }}
-                >
+                {/* UNIVERSAL */}
+                {images.map((image, i) => (
                   <motion.div
+                    key={i}
                     style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      color: "black",
-                      alignItems: "center",
-                      height: "100%",
+                      height: "120px",
+                      width: "120px",
+                      position: "absolute",
+                      top: `${image.top}`,
+                      right: `${image.right}`,
+                      left: `${image.left}`,
+                      bottom: `${image.bottom}`,
+                      zIndex: 10,
+                      backgroundColor: "white",
+                      border: "5px solid rgb(218,30,189)",
+                      borderRadius: "50%",
+                      "@keyframes spin": {
+                        from: {
+                          transform: "rotate(0deg)",
+                        },
+                        to: {
+                          transform: "rotate(360deg)",
+                        },
+                      },
+                      animation: "spin 15s linear infinite reverse",
                     }}
                     whileHover={{
-                      // rotate: 13,
+                      scale: [1, 1.3],
+                      x:
+                        image.position === "left"
+                          ? "-20"
+                          : image.position === "between"
+                          ? "0"
+                          : "20",
+                      y:
+                        image.position === "left"
+                          ? "-30"
+                          : image.position === "between"
+                          ? "-20"
+                          : "-30",
+                      // rotate: [0, -15],
                       rotate:
                         image.position === "left"
-                          ? 13
+                          ? [0, -15]
                           : image.position === "between"
-                          ? -5
-                          : -13,
+                          ? [0, 8]
+                          : [0, 15],
+                      borderRadius: ["50%", "25%"],
+                      boxShadow: "0 0 11px rgba(10,10,10,.3)",
                     }}
                     transition={{
-                      duration: 0.7,
+                      duration: 0.6,
                       ease: "easeInOut",
                     }}
                   >
-                    <Box
-                      sx={{
+                    <motion.div
+                      style={{
                         display: "flex",
-                        flexDirection: "column",
+                        justifyContent: "center",
+                        color: "black",
                         alignItems: "center",
+                        height: "100%",
+                      }}
+                      whileHover={{
+                        // rotate: 13,
+                        rotate:
+                          image.position === "left"
+                            ? 13
+                            : image.position === "between"
+                            ? -5
+                            : -13,
+                      }}
+                      transition={{
+                        duration: 0.7,
+                        ease: "easeInOut",
                       }}
                     >
-                      <img
-                        src={image.src}
-                        style={{ height: "100%", width: "40px" }}
-                      />
-                      <Typography variant="subtitle1"></Typography>
-                    </Box>
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                        }}
+                      >
+                        <img
+                          src={image.src}
+                          style={{ height: "100%", width: "40px" }}
+                        />
+                        <Typography variant="subtitle1"></Typography>
+                      </Box>
+                    </motion.div>
                   </motion.div>
-                </motion.div>
-              ))}
-            </Box>
+                ))}
+              </Box>
+            </FadeClear>
           </Grid>
         ) : (
           <MarginBoxLarge mx={3} width="100%">
             <Grid container>
               <Grid item xs={12}>
                 <VerticalFlexCenter margin="auto">
-                  <Typography variant="h4">Advanced Leads</Typography>
-                  <Typography variant="h6">
-                    All your lead information in one place
-                  </Typography>
+                  <FadeBottom>
+                    <Typography variant="h4">Advanced Leads</Typography>
+                    <Typography variant="h6">
+                      All your lead information in one place
+                    </Typography>
+                  </FadeBottom>
                 </VerticalFlexCenter>
               </Grid>
               {info.map((i) => (
                 <Grid item xs={12}>
-                  <MarginBoxLarge mx={5}>
-                    <Paper
-                      elevation={10}
-                      sx={{
-                        backgroundColor: "#F7FBFE",
-                        position: "relative",
-                      }}
-                    >
-                      <Box
+                  <FadeBottom>
+                    <MarginBoxLarge mx={5}>
+                      <Paper
+                        elevation={10}
                         sx={{
-                          backgroundColor: "white",
-                          height: "60px",
-                          width: "60px",
-                          position: "absolute",
-                          top: "-38px",
-                          right: "46%",
-                          boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 5px",
-                          borderRadius: "50%",
+                          backgroundColor: "#F7FBFE",
+                          position: "relative",
                         }}
                       >
-                        <VerticalFlexCenter>
-                          <img
-                            src={DocumentPNG}
-                            style={{
-                              height: "30px",
-                              width: "30px",
-                            }}
-                          />
-                        </VerticalFlexCenter>
-                      </Box>
+                        <Box
+                          sx={{
+                            backgroundColor: "white",
+                            height: "60px",
+                            width: "60px",
+                            position: "absolute",
+                            top: "-38px",
+                            right: "46%",
+                            boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 5px",
+                            borderRadius: "50%",
+                          }}
+                        >
+                          <VerticalFlexCenter>
+                            <img
+                              src={DocumentPNG}
+                              style={{
+                                height: "30px",
+                                width: "30px",
+                              }}
+                            />
+                          </VerticalFlexCenter>
+                        </Box>
 
-                      <VerticalFlexCenter>
-                        <PaddingBoxMedium>
-                          <TypographyUtil variant="h5">
-                            {i.title}
-                          </TypographyUtil>
-                          <TypographyUtil variant="body1">
-                            {i.description}
-                          </TypographyUtil>
-                        </PaddingBoxMedium>
-                      </VerticalFlexCenter>
-                    </Paper>
-                  </MarginBoxLarge>
+                        <VerticalFlexCenter>
+                          <PaddingBoxMedium>
+                            <TypographyUtil variant="h5">
+                              {i.title}
+                            </TypographyUtil>
+                            <TypographyUtil variant="body1">
+                              {i.description}
+                            </TypographyUtil>
+                          </PaddingBoxMedium>
+                        </VerticalFlexCenter>
+                      </Paper>
+                    </MarginBoxLarge>
+                  </FadeBottom>
                 </Grid>
               ))}
             </Grid>
@@ -304,21 +311,24 @@ export default function AdvancedSearch() {
           <>
             <Grid item md={6} xs={12}>
               <VerticalFlexCenter height="80%" p={5}>
-                <PaddingBoxSmall>
-                  <Typography variant="h4">Advanced Leads</Typography>
-                  <Typography variant="h6">
-                    All your lead information in one place
-                  </Typography>
-                  <TypographyUtil variant="body1" mt={2}>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Itaque quos sit quidem? Ab dolorum deleniti incidunt. Lorem
-                    ipsum dolor sit amet, consectetur adipisicing elit. Error
-                    hic beatae dolores expedita accusantium, modi dolorum
-                    obcaecati tempora. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Excepturi animi qui enim delectus corporis
-                    quidem reprehenderit facilis quas itaque voluptate?
-                  </TypographyUtil>
-                </PaddingBoxSmall>
+                <FadeClear duration={2000}>
+                  <PaddingBoxSmall>
+                    <Typography variant="h4">Advanced Leads</Typography>
+                    <Typography variant="h6">
+                      All your lead information in one place
+                    </Typography>
+                    <TypographyUtil variant="body1" mt={2}>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Itaque quos sit quidem? Ab dolorum deleniti incidunt.
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Error hic beatae dolores expedita accusantium, modi
+                      dolorum obcaecati tempora. Lorem ipsum dolor sit amet
+                      consectetur adipisicing elit. Excepturi animi qui enim
+                      delectus corporis quidem reprehenderit facilis quas itaque
+                      voluptate?
+                    </TypographyUtil>
+                  </PaddingBoxSmall>
+                </FadeClear>
               </VerticalFlexCenter>
             </Grid>
           </>

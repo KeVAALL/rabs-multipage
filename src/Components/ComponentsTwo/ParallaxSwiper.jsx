@@ -10,6 +10,7 @@ import "./swiper.css";
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper";
 import { Box } from "@mui/system";
+import { FadeRight } from "../../utility/Fade";
 
 export default function ParallaxSwiper() {
   const images = [
@@ -34,7 +35,7 @@ export default function ParallaxSwiper() {
   ];
 
   return (
-    <>
+    <FadeRight>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -58,6 +59,6 @@ export default function ParallaxSwiper() {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </FadeRight>
   );
 }

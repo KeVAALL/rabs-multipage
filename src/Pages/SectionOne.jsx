@@ -1,6 +1,6 @@
 import { Box, Grid } from "@mui/material";
 
-import MarginBox, { MarginTop } from "../utility/MarginBox";
+import MarginBox, { MarginBoxLarge, MarginTop } from "../utility/MarginBox";
 import MainContainer from "../utility/MainContainer";
 
 import CarouselSectionOne from "../Components/ComponentsOne/CarouselSectionOne";
@@ -19,9 +19,9 @@ export default function SectionOne() {
           <Features />
         </MarginBoxMedium>
 
-        <MarginBoxMedium>
+        <MarginBoxLarge>
           <BounceImage />
-        </MarginBoxMedium>
+        </MarginBoxLarge>
       </MainContainer>
       <MarginTop>
         <Footer />

@@ -1,17 +1,15 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Grid } from "@mui/material";
+
 import { useState } from "react";
 import CarouselOne from "../Carousel";
 import TypographyUtil from "../../utility/TypographyUtil";
-import {
-  HorizontalFlex,
-  TextAlignCenter,
-  VerticalFlex,
-} from "../../utility/FlexBox";
+import { TextAlignCenter, VerticalFlex } from "../../utility/FlexBox";
 import MarginBoxMedium from "../../utility/MarginBox";
 import { mediumDown } from "../../styles";
 import DownloadBtn from "./DownloadBtn";
 import RequestDemo from "./RequestDemo";
 import FormDialog from "../../utility/Dialog";
+import { FadeBottom, FadeRight } from "../../utility/Fade";
 
 export default function CarouselSectionOne() {
   const mdDown = mediumDown();
@@ -34,41 +32,58 @@ export default function CarouselSectionOne() {
       />
       <Grid container spacing={5}>
         <Grid item xs={12} md={6}>
-          <VerticalFlex ml={3} gap={2} height="470px">
-            <TypographyUtil
-              variant="h3"
-              fontWeight="bold"
-              textAlign={mdDown && "center"}
-            >
-              India's #1 Real Estate CRM <br />
-              to sell more properties, <br />
-              faster
-            </TypographyUtil>
-            <TypographyUtil variant="h5" textAlign={mdDown && "center"}>
-              Convert every inquiry into a booking
-            </TypographyUtil>
-            <DownloadBtn />
-            <RequestDemo handleClickOpen={handleClickOpen} />
-          </VerticalFlex>
+          <FadeBottom>
+            <VerticalFlex ml={3} gap={2} height="470px">
+              <TypographyUtil
+                variant="h3"
+                fontWeight="bold"
+                textAlign={mdDown && "center"}
+              >
+                India's #1 Real Estate CRM <br />
+                to sell more properties, <br />
+                faster
+              </TypographyUtil>
+              <TypographyUtil variant="h5" textAlign={mdDown && "center"}>
+                Convert every inquiry into a booking
+              </TypographyUtil>
+              <DownloadBtn />
+              <RequestDemo handleClickOpen={handleClickOpen} />
+            </VerticalFlex>
+          </FadeBottom>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Box
-            sx={{
-              height: { xs: 450, md: 550, lg: 650 },
-              width: { xs: 400, md: 500, lg: 600 },
-              display: "flex",
-              justifyContent: mdDown && "center",
-              margin: "auto",
-            }}
-          >
-            <CarouselOne />
-          </Box>
+          <FadeRight>
+            <Box
+              sx={{
+                height: { xs: 450, md: 550, lg: 650 },
+                width: { xs: 400, md: 500, lg: 600 },
+                display: "flex",
+                justifyContent: mdDown && "center",
+                margin: "auto",
+              }}
+            >
+              <CarouselOne />
+            </Box>
+          </FadeRight>
         </Grid>
 
         <Grid item xs={12}>
-          {mdDown ? (
-            <TextAlignCenter>
-              <MarginBoxMedium>
+          <FadeBottom>
+            {mdDown ? (
+              <TextAlignCenter>
+                <MarginBoxMedium>
+                  <TypographyUtil
+                    variant="h4"
+                    fontWeight="bold"
+                    textAlign={mdDown && "center"}
+                  >
+                    Designed & Built to support Real Estate Builders, <br />{" "}
+                    Brokers and Fast Growing Marketplaces
+                  </TypographyUtil>
+                </MarginBoxMedium>
+              </TextAlignCenter>
+            ) : (
+              <TextAlignCenter>
                 <TypographyUtil
                   variant="h4"
                   fontWeight="bold"
@@ -77,20 +92,9 @@ export default function CarouselSectionOne() {
                   Designed & Built to support Real Estate Builders, <br />{" "}
                   Brokers and Fast Growing Marketplaces
                 </TypographyUtil>
-              </MarginBoxMedium>
-            </TextAlignCenter>
-          ) : (
-            <TextAlignCenter>
-              <TypographyUtil
-                variant="h4"
-                fontWeight="bold"
-                textAlign={mdDown && "center"}
-              >
-                Designed & Built to support Real Estate Builders, <br /> Brokers
-                and Fast Growing Marketplaces
-              </TypographyUtil>
-            </TextAlignCenter>
-          )}
+              </TextAlignCenter>
+            )}
+          </FadeBottom>
         </Grid>
       </Grid>
     </>

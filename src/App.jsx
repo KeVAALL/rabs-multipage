@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState, useEffect } from "react";
 import RootLayout from "./Components/RootLayout";
 import { createTheme, ThemeProvider, useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -7,6 +7,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SectionOne from "./Pages/SectionOne";
 import SectionTwo from "./Pages/SectionTwo";
 import RalewayTTF from "./fonts/raleway.regular.ttf";
+import { Box, Typography } from "@mui/material";
+import { VerticalFlexCenter } from "./utility/FlexBox";
 
 const uniTheme = createTheme({
   typography: {
@@ -48,6 +50,14 @@ const uniTheme = createTheme({
 });
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -66,10 +76,18 @@ function App() {
   ]);
 
   return (
-    <ThemeProvider theme={uniTheme}>
-      <CssBaseline />
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <>
+      {loading === false ? (
+        <ThemeProvider theme={uniTheme}>
+          <CssBaseline />
+          <RouterProvider router={router} />
+        </ThemeProvider>
+      ) : (
+        <VerticalFlexCenter mt="250px">
+          <div className="loader"></div>
+        </VerticalFlexCenter>
+      )}
+    </>
   );
 }
 

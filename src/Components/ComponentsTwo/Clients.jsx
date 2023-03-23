@@ -8,6 +8,7 @@ import PaddingBoxLarge from "../../utility/PaddingBox";
 import TypographyUtil from "../../utility/TypographyUtil";
 import { TextAlignCenter, VerticalFlexCenter } from "../../utility/FlexBox";
 import { smallDown } from "../../styles";
+import { FadeBottom, FadeClear } from "../../utility/Fade";
 
 const images = [
   {
@@ -69,27 +70,31 @@ export default function Clients() {
         <PaddingBoxLarge>
           <Grid container>
             <Grid item xs={12}>
-              <TextAlignCenter>
-                <TypographyUtil variant="h4">
-                  TRUSTED BY 500+ REAL ESTATE BUSINESSES WORLDWIDE
-                </TypographyUtil>
-              </TextAlignCenter>
+              <FadeBottom>
+                <TextAlignCenter>
+                  <TypographyUtil variant="h4">
+                    TRUSTED BY 500+ REAL ESTATE BUSINESSES WORLDWIDE
+                  </TypographyUtil>
+                </TextAlignCenter>
+              </FadeBottom>
             </Grid>
           </Grid>
           <Grid container>
             {images.map((image, i) => (
               <Grid item lg={3} sm={6} xs={12} key={i}>
                 <VerticalFlexCenter gap={smallDown ? 3 : 1}>
-                  <img
-                    src={image.src}
-                    style={{ height: "200px", width: "200px" }}
-                  />
-                  <Box sx={{ display: "flex", gap: 1 }}>
-                    <LocationOnIcon />
-                    <Typography variant="subtitle1">
-                      {image.location}
-                    </Typography>
-                  </Box>
+                  <FadeClear duration={2500}>
+                    <img
+                      src={image.src}
+                      style={{ height: "200px", width: "200px" }}
+                    />
+                    <Box sx={{ display: "flex", gap: 1 }}>
+                      <LocationOnIcon />
+                      <Typography variant="subtitle1">
+                        {image.location}
+                      </Typography>
+                    </Box>
+                  </FadeClear>
                 </VerticalFlexCenter>
               </Grid>
             ))}
