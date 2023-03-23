@@ -2,9 +2,15 @@ import React from "react";
 import Carousel from "react-material-ui-carousel";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { Paper, Button, Box } from "@mui/material";
+
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import Slider1 from "../images/carousel1.png";
+import Slider2 from "../images/carousel2.png";
+import Slider3 from "../images/carousel3.png";
+import Slider4 from "../images/carousel4.png";
+import Slider5 from "../images/carousel5.png";
+import Slider6 from "../images/carousel6.png";
 
 export default function CarouselOne() {
   const theme = useTheme();
@@ -12,22 +18,22 @@ export default function CarouselOne() {
 
   var items = [
     {
-      url: "http://rabsconnect.in/assets/img/slider/banner-1.webp",
+      url: Slider1,
     },
     {
-      url: "http://rabsconnect.in/assets/img/slider/banner-2.webp",
+      url: Slider2,
     },
     {
-      url: "http://rabsconnect.in/assets/img/slider/banner-3.webp",
+      url: Slider3,
     },
     {
-      url: "http://rabsconnect.in/assets/img/slider/banner-4.webp",
+      url: Slider4,
     },
     {
-      url: "http://rabsconnect.in/assets/img/slider/banner-5.webp",
+      url: Slider5,
     },
     {
-      url: "http://rabsconnect.in/assets/img/slider/banner-6.webp",
+      url: Slider6,
     },
   ];
 
