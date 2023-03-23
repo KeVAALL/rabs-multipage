@@ -10,45 +10,57 @@ import { TextAlignCenter, VerticalFlexCenter } from "../../utility/FlexBox";
 import { smallDown } from "../../styles";
 import { FadeBottom, FadeClear } from "../../utility/Fade";
 
+import AskRealtor from "../../images/clients/askrealtors.png";
+import FloorAssist from "../../images/clients/floorassist.png";
+import MumbaiAxis from "../../images/clients/mumbaiaxis.png";
+import PerSqFoot from "../../images/clients/persqrfoot.png";
+import PropertyJunction from "../../images/clients/propertyjunction.png";
+import PropertyKing from "../../images/clients/propertyking.png";
+import PropertyLounge from "../../images/clients/propertylounge.png";
+import Sahajanand from "../../images/clients/sahajanand.png";
+import SippyHousing from "../../images/clients/sippyhousing.png";
+import ValueProperty from "../../images/clients/valueproperty.png";
+import WillowStone from "../../images/clients/willowstone.png";
+
 const images = [
   {
-    src: "http://rabsconnect.in/assets/img/client-logo/askrealtors.webp",
+    src: AskRealtor,
     location: "Wadala / Kharghar",
   },
   {
-    src: "http://rabsconnect.in/assets/img/client-logo/floorassist.webp",
+    src: FloorAssist,
     location: "Andheri East",
   },
   {
-    src: "http://rabsconnect.in/assets/img/client-logo/mumbaiaaxis.webp",
+    src: MumbaiAxis,
     location: "Kandivali",
   },
   {
-    src: "http://rabsconnect.in/assets/img/client-logo/persqurefoot.webp",
+    src: PerSqFoot,
     location: "Chembur",
   },
   {
-    src: "http://rabsconnect.in/assets/img/client-logo/propertyjunction.webp",
+    src: PropertyJunction,
     location: " Pune / Mumbai",
   },
   {
-    src: "http://rabsconnect.in/assets/img/client-logo/propertyking.webp",
+    src: PropertyKing,
     location: "Mumbai",
   },
   {
-    src: "http://rabsconnect.in/assets/img/client-logo/propertylounge.webp",
+    src: PropertyLounge,
     location: "Santacruz",
   },
   {
-    src: "http://rabsconnect.in/assets/img/client-logo/sahajanand.webp",
+    src: Sahajanand,
     location: "Goregaon",
   },
   {
-    src: "http://rabsconnect.in/assets/img/client-logo/sippyhousing.webp",
+    src: SippyHousing,
     location: "Khar",
   },
   {
-    src: "http://rabsconnect.in/assets/img/client-logo/valueproperty.webp",
+    src: ValueProperty,
     location: "Parel",
   },
   {
@@ -56,7 +68,7 @@ const images = [
     location: "Malad",
   },
   {
-    src: "http://rabsconnect.in/assets/img/client-logo/willowstone.webp",
+    src: WillowStone,
     location: "Thane",
   },
 ];
