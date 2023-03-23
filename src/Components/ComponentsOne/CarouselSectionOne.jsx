@@ -28,7 +28,7 @@ export default function CarouselSectionOne() {
   };
 
   return (
-    <HorizontalFlex mt={mdDown && 5}>
+    <HorizontalFlex mt={mdDown && 7}>
       <FormDialog
         open={open}
         handleClickOpen={handleClickOpen}
