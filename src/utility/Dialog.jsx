@@ -32,13 +32,8 @@ export default function FormDialog({ open, handleClickOpen, handleClose }) {
   const mdDown = mediumDown();
 
   return (
-    <div>
-      <Dialog
-        // open={open}
-        onClose={handleClose}
-        maxWidth="xl"
-        sx={{ display: open ? "block" : "none" }}
-      >
+    <Box sx={{ visibility: !open ? "hidden" : "visible" }}>
+      <Dialog onClose={handleClose} maxWidth="xl" open={open}>
         <DialogContent>
           <Grid container spacing={8}>
             {!mdDown && (
@@ -50,7 +45,7 @@ export default function FormDialog({ open, handleClickOpen, handleClose }) {
                         height: "40px",
                         width: "40px",
                         position: "absolute",
-                        right: "0px",
+                        right: "-19px",
                         top: "5px",
                         mr: 5,
                       }}
@@ -68,6 +63,7 @@ export default function FormDialog({ open, handleClickOpen, handleClose }) {
                   <TypographyUtil variant="h5" color="#DF21B6">
                     We Promise
                   </TypographyUtil>
+
                   <VerticalFlexCenter>
                     {images.map((image) => (
                       <VerticalFlexCenter>
@@ -90,6 +86,21 @@ export default function FormDialog({ open, handleClickOpen, handleClose }) {
             <Grid item md={6} xs={12} sx={{ pr: !mdDown ? 10 : 0 }}>
               <VerticalFlexCenter>
                 <VerticalFlex>
+                  {mdDown && (
+                    <CloseIcon
+                      sx={{
+                        height: "40px",
+                        width: "40px",
+                        position: "absolute",
+                        right: "-25px",
+                        top: "13px",
+                        mr: 5,
+                      }}
+                      onClick={handleClose}
+                    >
+                      <Button onClick={handleClose}></Button>
+                    </CloseIcon>
+                  )}
                   <img
                     src="http://rabsconnect.in/assets/img/logo/rabs_connect_logo.webp"
                     style={{ height: "80px", width: "220px" }}
@@ -165,6 +176,6 @@ export default function FormDialog({ open, handleClickOpen, handleClose }) {
           </Grid>
         </DialogContent>
       </Dialog>
-    </div>
+    </Box>
   );
 }

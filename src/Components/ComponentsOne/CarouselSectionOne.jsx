@@ -1,6 +1,6 @@
 import { Box, Grid } from "@mui/material";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CarouselOne from "../Carousel";
 import TypographyUtil from "../../utility/TypographyUtil";
 import {
@@ -20,7 +20,10 @@ import MainContainer from "../../utility/MainContainer";
 export default function CarouselSectionOne() {
   const mdDown = mediumDown();
   const smDown = smallDown();
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(true);
+
+  // useEffect(() => {}, [open]);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -39,6 +42,16 @@ export default function CarouselSectionOne() {
             handleClickOpen={handleClickOpen}
             handleClose={handleClose}
           />
+
+          {/* {open && (
+            <>
+              <FormDialog
+                open={!open}
+                handleClickOpen={handleClickOpen}
+                handleClose={handleClose}
+              />
+            </>
+          )} */}
         </FadeClear>
         <Grid container spacing={5}>
           <Grid item xs={12} md={6}>
