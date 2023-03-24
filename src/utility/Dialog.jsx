@@ -33,7 +33,12 @@ export default function FormDialog({ open, handleClickOpen, handleClose }) {
 
   return (
     <div>
-      <Dialog open={open} onClose={handleClose} maxWidth="xl">
+      <Dialog
+        // open={open}
+        onClose={handleClose}
+        maxWidth="xl"
+        sx={{ display: open ? "block" : "none" }}
+      >
         <DialogContent>
           <Grid container spacing={8}>
             {!mdDown && (

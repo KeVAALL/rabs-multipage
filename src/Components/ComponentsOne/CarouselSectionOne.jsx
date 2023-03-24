@@ -14,7 +14,7 @@ import { mediumDown, smallDown } from "../../styles";
 import DownloadBtn from "./DownloadBtn";
 import RequestDemo from "./RequestDemo";
 import FormDialog from "../../utility/Dialog";
-import { FadeBottom, FadeRight } from "../../utility/Fade";
+import { FadeBottom, FadeClear, FadeRight } from "../../utility/Fade";
 import MainContainer from "../../utility/MainContainer";
 
 export default function CarouselSectionOne() {
@@ -33,11 +33,13 @@ export default function CarouselSectionOne() {
   return (
     <MainContainer>
       <HorizontalFlex mt={mdDown && 5}>
-        <FormDialog
-          open={open}
-          handleClickOpen={handleClickOpen}
-          handleClose={handleClose}
-        />
+        <FadeClear>
+          <FormDialog
+            open={open}
+            handleClickOpen={handleClickOpen}
+            handleClose={handleClose}
+          />
+        </FadeClear>
         <Grid container spacing={5}>
           <Grid item xs={12} md={6}>
             <FadeBottom>
@@ -66,11 +68,11 @@ export default function CarouselSectionOne() {
             <FadeRight>
               <Box
                 sx={{
-                  height: { xs: 450, md: 550, lg: 650 },
-                  width: { xs: "100%", md: 500, lg: 600 },
+                  height: { xs: 450, sm: 500, md: 550, lg: 650 },
+                  width: { xs: "100%", sm: 450, md: 500, lg: 600 },
                   display: "flex",
                   justifyContent: mdDown && "center",
-                  // margin: "auto",
+                  margin: "auto",
                   mt: mdDown && 2,
                 }}
               >
